@@ -29,6 +29,7 @@ def getToken(email, password):
 
 	return requests.post(URL, json=Payload).json()['result']['token']
 
+
 def getDeviceList(email, password):
 	URL = "https://eu-wap.tplinkcloud.com?token=" + getToken(email, password)
 	Payload = {
